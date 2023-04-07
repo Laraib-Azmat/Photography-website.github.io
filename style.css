@@ -1,0 +1,413 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+   
+@font-face {
+    font-family: "Ruhl lighter";
+    src: url(/Fonts/FrankRuhlLibre-Light.ttf);   
+}
+
+@font-face {
+    font-family: 'Ruhl medium';
+    src: url(/Fonts/FrankRuhlLibre-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Ruhl regular ';
+    src: url(/Fonts/FrankRuhlLibre-Regular.ttf);
+}
+@font-face {
+    font-family: 'Vibes';
+    src: url(/Fonts/GreatVibes-Regular.ttf);
+}
+
+html{
+    font-size: 62.5%;
+    --header1: calc(2rem + 1vw);
+    --header2: calc(3.5rem + 1vw);
+    --header3: calc(3rem + 1vw);
+    --header4: calc(2.5rem + 1vw);
+    --text: calc(1.5rem +  1vw);
+    --big: calc(6rem + 1vw)
+    
+
+}
+body{
+    font-family: "Ruhl medium", sans-serif;
+     animation: opening 1s ease-in-out;
+}
+
+h1{
+    font-family: "Vibes", sans-serif;
+    font-size: var(--header3);
+}
+
+p{
+    font-size: var(--text);
+ 
+}
+
+h2{
+    font-size: var(--header2);
+    font-family: 'Ruhl Medium';
+}
+h3{
+    font-size: var(--header3);
+}
+h4,h5{
+    font-size: var(--header4);
+    font-family: 'Ruhl lighter';
+} 
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Ruhl medium';
+    font-size: var(--text);
+}   
+
+.main-head{
+   box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+   z-index: 2;
+   position:sticky;
+      top: 0%;
+   background-color: whitesmoke;
+}
+
+nav{
+    width: 90%;
+    margin: auto;
+    min-height: 10vh;
+    padding: 2rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a:hover{
+
+           text-decoration: underline;
+}
+
+.nav-link{
+    display: flex;
+    justify-content: space-around;
+    flex: 1 1 40rem;
+}
+
+#logo{
+    flex: 1 1 20rem;
+}
+
+     /* 1st section: hero section */
+
+ .hero{
+    min-height: 10vh;
+    width: 95%;
+    margin: 0 0 0 auto;
+    display: flex; 
+    flex-wrap: wrap;
+    overflow: hidden;
+}    
+
+.hero-intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    flex: 2 1 40rem;
+    text-align: center;
+}
+
+.hero-intro p {
+    padding:5rem 10rem ;
+    color: rgb(74, 73, 73);
+}
+.hero-intro h2 {
+    padding-top: 3rem ;
+}
+.hero-intro a {
+    border: 3px solid black;
+    padding: 2rem 3rem;
+    margin-bottom: 2rem;
+}
+.hero a:hover{
+    background-color: #dad4dd;
+}
+
+.hero-images{
+   flex: 1 1 40rem;
+   background: linear-gradient(#dad4dd, #dad4d1);
+   position: relative;
+   z-index: 1;
+}
+.elena{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.plant{
+    position: absolute;
+    left: -20%;
+    bottom: 0;
+    z-index: -1;
+    animation: plant 1s ease-in-out 0.5s forwards, plantshake 2.5s  infinite ease alternate-reverse 2s;
+    transform-origin: bottom;
+    max-height: 80%;
+}
+.plant2{
+    left: 40%;
+   
+}
+
+  /* Animations */
+
+  @keyframes opening {
+
+    from{
+           opacity: 0;
+    }
+     
+    to{
+         opacity: 1;
+    }
+
+  }
+
+  @keyframes plant {
+
+    from{
+        transform: translateY(-10%) rotateZ(-10deg) rotateX(180deg);
+    }
+    to{
+        transform: translate(0%) rotateZ(0deg) rotateX(0deg);
+    }
+    }
+
+   @keyframes plantshake {
+
+    from{
+        transform: rotateZ(-5deg);
+    }
+    to{
+        transform: rotateZ(0deg);
+    }
+   }
+
+     /* About section */
+
+
+     .about{
+        min-height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+     }
+     
+     .about-text{
+        flex: 2 1 40rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(57, 56, 56);
+        color: white;
+     }
+
+     .about-img{
+        flex: 1 1 40rem;
+        position: relative;
+       
+     }
+     .about-img h5{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%,-20%);
+        letter-spacing: 2rem;
+     }
+.about-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-text div{
+    padding: 3rem 8rem;
+}
+.about-text p{
+    font-family: 'Ruhl lighter';
+}
+.about-text h3{
+    padding: 2rem 0rem;
+}
+.about-text h2{
+    font-family: "vibes";
+    padding: 4rem;
+}
+
+
+   /* Gallery section */
+
+   .gallery{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(3 ,1fr);
+      position: relative;
+   }
+   
+   .gallery-head{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: whitesmoke;
+    background-color: rgb(85, 83, 83);
+    padding: 5rem 10rem;
+    text-align: center;
+   }
+
+  .gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    
+  }
+
+  .gallery1{
+    grid-column: 1/3;
+  }
+
+  .gallery2{
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+
+    /* CONTACT SECTION */
+ 
+    .contact{
+        display: flex;
+        flex-wrap: wrap;
+    }
+.form{
+    flex: 3 1 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact img{
+    flex: 1 1 40rem;
+}
+
+.form span{
+    font-size: var(--big);
+    color: rgb(193, 98, 171);
+}
+.form label{
+    display: block;
+    font-size: var(--text);
+    margin-top: 3rem;
+}
+.form input{
+    display: block;
+    margin: 2rem 0rem;
+    background-color: rgb(73, 67, 67);
+    color: whitesmoke;
+    font-size: var(--text);
+    border: none;
+    padding: 1rem;
+}
+
+.form button{
+   font-size: var(--text);
+   padding: 1rem;
+   width: 100%;
+background-color:rgb(193, 98, 171) ;
+color: whitesmoke;
+border: none;
+margin-bottom: 2rem;
+}
+
+.form button:hover{
+    background-color: rgb(160, 6, 160);
+}
+
+   /* FOOTER SECTION */
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color:rgb(73, 67, 67) ;
+    color: whitesmoke;
+    align-items: center;
+    padding: 2rem 5%;
+}
+footer h4{
+    flex: 1 1 40rem;
+}
+
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 40rem;
+}
+
+   /* media query */
+
+@media screen and (max-width:842px) {
+
+    .hero{
+        width: 100%;
+    }
+    .hero-intro p{
+    padding: 5rem 3rem;
+    }
+   
+   
+
+   /* About section */
+
+   .about-text div{
+    padding: 3rem 3rem;
+}
+
+   /* GALLERY */
+
+    .gallery img{
+        grid-column: auto;
+        grid-row: auto;
+    }
+.gallery{
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+    
+    .gallery-head{
+        display: none;
+    }
+
+    /* CONTACT SECTION */
+   .contact img{
+   display: none;
+   }
+
+
+    /* FOOTER */
+ footer h4{
+ order: 2;
+ padding: 1rem;
+ text-align: center;
+ }
+footer ul{
+    order: 1;
+}
+
+}
