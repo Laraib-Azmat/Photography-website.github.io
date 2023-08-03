@@ -6,21 +6,21 @@
    
 @font-face {
     font-family: "Ruhl lighter";
-    src: url(/Fonts/FrankRuhlLibre-Light.ttf);   
+    src: url(./Fonts/FrankRuhlLibre-Light.ttf);   
 }
 
 @font-face {
     font-family: 'Ruhl medium';
-    src: url(/Fonts/FrankRuhlLibre-Medium.ttf);
+    src: url(./Fonts/FrankRuhlLibre-Medium.ttf);
 }
 
 @font-face {
     font-family: 'Ruhl regular ';
-    src: url(/Fonts/FrankRuhlLibre-Regular.ttf);
+    src: url(./Fonts/FrankRuhlLibre-Regular.ttf);
 }
 @font-face {
     font-family: 'Vibes';
-    src: url(/Fonts/GreatVibes-Regular.ttf);
+    src: url(./Fonts/GreatVibes-Regular.ttf);
 }
 
 html{
